@@ -7,6 +7,7 @@ export const Taskcard = ({task}) =>{
     
     const handleDone = async ()=>{
        await toggleTaskDone(task.id);
+       console.log(task.id);
     }
     
     return(
@@ -17,7 +18,7 @@ export const Taskcard = ({task}) =>{
             <span>{task.createAt}</span>
             <button onClick={() => deleteTask(task.id)}>Delete</button>
             <button onClick={()=>navigate(`/edit/${task.id}`)}>Edit</button>
-            <button onClick={()=>handleDone(task.done)}>togle task</button>
+            <button onClick={()=>handleDone()}>togle task</button>
         </div>
     );
 }
