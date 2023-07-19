@@ -1,6 +1,6 @@
 import { Formik,Form } from "formik";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate} from "react-router-dom";
 
 import { useTasks } from "../context/taskcontext.jsx";
 
@@ -13,6 +13,7 @@ export const Taskform = () =>{
         descripcion:'',
     })
     const params = useParams();
+    const navigate = useNavigate();
     useEffect(()=>{
         const loadTask = async()=>{
             if(params.id){
@@ -42,11 +43,15 @@ export const Taskform = () =>{
              onSubmit={async(values, actions) => {
                 if(params.id){
                     await updateTask(values,params.id);
+                    navigate('/');
                 }else{
                     await createTask(values);
                 }
                 
-                actions.resetForm();
+               setTask({
+                title:'',
+                descripcion:'',
+               });
                
              }}
             >
@@ -66,6 +71,7 @@ export const Taskform = () =>{
                   placeholder="write a description"
                   onChange={handleChange}
                   value={values.descripcion}
+                  
                 >
                       
                 </textarea>
