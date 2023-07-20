@@ -65,17 +65,26 @@ export const TaskcontextProvider = ({children}) => {
          
     }
 
-    const toggleTaskDone = async(id)=>{
-     try{
-        const taskFound = tasks.find((tasks) => tasks.id === id);
-        await toggleTaskDoneRequest(id,taskFound.done === 0 ?true:false);
-
-        setTasks(tasks.map(task => task.id === id ? task.done = task.done === 0 ? 1 : 0 : tasks.done));
-     }catch(error){
+    const toggleTaskDone = async (id) => {
+        try {
+          // Encuentra la tarea correspondiente al ID proporcionado
+          const taskFound = tasks.find((task) => task.id === id);
+      
+          // Llama a la función toggleTaskDoneRequest para cambiar el estado de la tarea en el servidor
+          await toggleTaskDoneRequest(id, taskFound.done === 0 ? true : false);
+      
+          // Actualiza el estado de las tareas en el componente
+          setTasks((prevTasks) =>
+            prevTasks.map((task) =>
+              task.id === id ? { ...task, done: task.done === 0 ? 1 : 0 } : task
+            )
+          );
+        } catch (error) {
           console.error(error);
-     }
-        
-    }
+        }
+      };
+      
+      
 
     
 

@@ -1,6 +1,6 @@
 import { Route,Routes } from 'react-router-dom';
 
-import './App.css'
+
 import Navbar from './components/navbar';
 import { TaskcontextProvider } from './context/taskcontext';
 import { Notfound } from './pages/notfound.jsx';
@@ -15,7 +15,8 @@ function App() {
 
   return (
 
-    <TaskcontextProvider>
+    <div className='bg-zinc-800'>
+      <TaskcontextProvider>
              <Navbar/>
       <Routes>
          <Route path='/' element={<Taskpage/>}/>
@@ -25,7 +26,8 @@ function App() {
       </Routes>
 
     </TaskcontextProvider>
-      
+    
+    </div>  
     
     
   );
