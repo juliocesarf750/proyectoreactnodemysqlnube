@@ -20,5 +20,8 @@
     "node": "^20.4.0",
     "nodemon": "^2.0.21",
     "react-router-dom": "^6.9.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.3.3"
   }
 }
