@@ -1,3 +1,76 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+
+html,body {
+    margin: 0px;
+    padding: 0px;
+  background:rgb(221, 221, 221);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+ 
+}
+.navbar{
+    
+    width: 100%;
+    height: 67px;
+    
+    background: rgb(240, 240, 240);
+    
+}
+
+.navbar_contenedor{
+    max-width: 1300px;
+    background: rgb(240, 240, 240);
+    
+    height: 67px;
+    margin: 0px auto;
+}
+
+.navbar_logo{
+  float: left;
+  color: rgb(0, 0, 0);
+  height: 67px;
+  margin-left: 10px;
+ 
+}
+.navbar_logo h1{
+   margin: 12px;
+   
+}
+
+.navbar_navegacion{
+    float: right;
+    margin-right: 10px;
+}
+
+.navbar_navegacion ul{
+    display: flex;
+    margin: 0px;
+    
+}
+.navbar_navegacion li{
+   
+    list-style: none;
+    padding:23px 0px;
+    
+}
+
+
+.navbar_navegacion_link{
+    padding:25px;
+    text-decoration: none;
+    
+    margin-left: 1px;
+    
+    color: black;
+   
+}
+
+.navbar_navegacion_link:hover{
+    background: black;
+    color: white;
+    transition:0.5s;
+    
+}
+
+.pagina_formulario{
+    background: rebeccapurple;
+}

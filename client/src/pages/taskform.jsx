@@ -34,7 +34,7 @@ export const Taskform = () =>{
 
   
     return(
-        <div>
+        <div className="pagina_formulario">
             <h1>{params.id ? 'Edit task' : 'New task'}</h1>
             <Formik 
                 initialValues={task}
@@ -78,9 +78,7 @@ export const Taskform = () =>{
                 <button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Saving..." : "Save"}
                 </button>
-                <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+                
             </Form>
              )}                
             </Formik>

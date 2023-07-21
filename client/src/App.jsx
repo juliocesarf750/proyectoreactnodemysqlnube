@@ -15,7 +15,7 @@ function App() {
 
   return (
 
-    <div className='bg-zinc-800'>
+    
       <TaskcontextProvider>
              <Navbar/>
       <Routes>
@@ -27,7 +27,7 @@ function App() {
 
     </TaskcontextProvider>
     
-    </div>  
+      
     
     
   );
