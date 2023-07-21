@@ -35,6 +35,11 @@ export const Taskform = () =>{
   
     return(
         <div className="pagina_formulario">
+          <div className="contenedor_formulario">
+            <div className="formulario_parrafo">
+
+            </div>
+            <div className="formulario">
             <h1>{params.id ? 'Edit task' : 'New task'}</h1>
             <Formik 
                 initialValues={task}
@@ -58,13 +63,13 @@ export const Taskform = () =>{
 
              {({handleChange, handleSubmit, values, isSubmitting}) =>(
                 <Form onSubmit={handleSubmit}>
-                <label>title</label>
+                <h3>title</h3>
                 <input type="text" name="title" placeholder="write a title"
                 onChange={handleChange}
                 value={values.title}
                 />
 
-                <label>descripcion</label>
+                <h3>descripcion</h3>
                 <textarea
                   name="descripcion"
                   rows="3"
@@ -82,6 +87,8 @@ export const Taskform = () =>{
             </Form>
              )}                
             </Formik>
+            </div>
+            </div>
         </div>
     );
 }

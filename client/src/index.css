@@ -1,17 +1,19 @@
 
+*{
+    padding: 0px;
+    margin: 0px;
+}
 
 html,body {
-    margin: 0px;
-    padding: 0px;
   background:rgb(221, 221, 221);
   font-family:Georgia, 'Times New Roman', Times, serif;
- 
+  font-family: sans-serif;
 }
 .navbar{
     
     width: 100%;
     height: 67px;
-    
+    margin :0px;
     background: rgb(240, 240, 240);
     
 }
@@ -72,5 +74,94 @@ html,body {
 }
 
 .pagina_formulario{
-    background: rebeccapurple;
+    background: url(./imagenes/imagen1.jpg);
+    background-size: 2000px;
+    
+    width: 100%;
+    height: 92.045vh;
+    display: flex;
+    
+}
+.contenedor_formulario{
+    width: 800px;
+    height: 500px;
+    
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+
+    
+ 
+}
+
+.formulario{
+    width: 50%;
+    height: 500px;
+    background: rgb(248, 248, 248);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgba(137, 43, 226, 0.808);
+    
+    
+}
+
+.formulario h1{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: rgb(61, 61, 61);
+    
+
+}
+
+.formulario  h3{
+    width: 87%;
+    margin-left: 26px;
+
+    
+   color: rgb(61, 61, 61);
+    
+    margin-bottom: 10px;
+}
+
+.formulario input{
+    width: 87%;
+    margin-left: 26px;
+    height: 40px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background: rgb(238, 238, 238);
+}
+
+.formulario textarea{
+    width: 87%;
+    margin-left: 26px;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 17px;
+    background: rgb(238, 238, 238);
+    border: none;
+    outline: none;
+}
+.formulario button{
+    width:87%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    margin-left: 26px;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+.formulario_parrafo{
+    width: 50%;
+    height: 500px;
+    background: sandybrown;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
