@@ -40,7 +40,7 @@ export const Taskform = () =>{
 
             </div>
             <div className="formulario">
-            <h1>{params.id ? 'Edit task' : 'New task'}</h1>
+            <h1 className="text-3xl">{params.id ? 'Editor de Tareas' : 'Nueva tarea'}</h1>
             <Formik 
                 initialValues={task}
                 enableReinitialize={true}
@@ -62,14 +62,14 @@ export const Taskform = () =>{
             >
 
              {({handleChange, handleSubmit, values, isSubmitting}) =>(
-                <Form onSubmit={handleSubmit}>
-                <h3>title</h3>
+                <Form className="text-lg" onSubmit={handleSubmit}>
+                <h3>Titulo</h3>
                 <input type="text" name="title" placeholder="write a title"
                 onChange={handleChange}
                 value={values.title}
                 />
 
-                <h3>descripcion</h3>
+                <h3>Descripción</h3>
                 <textarea
                   name="descripcion"
                   rows="3"
@@ -80,7 +80,7 @@ export const Taskform = () =>{
                 >
                       
                 </textarea>
-                <button type="submit" disabled={isSubmitting}>
+                <button className="py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Saving..." : "Save"}
                 </button>
                 

@@ -14,18 +14,25 @@ function Taskpage () {
          return <h1>No tasks yet</h1>
        }
 
-        return tasks.map(task =>(
-            <Taskcard task={task} key={task.id}/>
+        return  tasks.map(task =>(
+            
+            <Taskcard  task={task} key={task.id}/>
         ))
     }
 
 
     return(
-        <div>
+        <div className="pagina_tareas">
+            <div className="pagina_tareas_titulo">
             <h1>
-                Tasks
+                Tareas
             </h1>
-            {renderMain()}
+            </div>
+            
+             <div className="contenedor_cards"> 
+                {renderMain()}
+            </div>
+            
         </div>
     );
 }

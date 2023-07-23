@@ -1,21 +1,30 @@
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
     padding: 0px;
     margin: 0px;
 }
 
 html,body {
-  background:rgb(221, 221, 221);
+ 
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-family: sans-serif;
+  background: rgb(250, 250, 250);
 }
 .navbar{
     
     width: 100%;
     height: 67px;
     margin :0px;
-    border-bottom: solid 1px rgb(211, 211, 211);
+    
     background: rgb(240, 240, 240);
+    border-bottom: solid 2px rgb(214, 214, 214);
+    z-index: 1;
+    position: fixed;
+    
     
     
 }
@@ -26,6 +35,7 @@ html,body {
         
     height: 67px;
     margin: 0px auto;
+    border-bottom: solid 2px rgb(214, 214, 214);
 }
 
 .navbar_logo{
@@ -76,20 +86,24 @@ html,body {
 }
 
 .pagina_formulario{
-    background: url(./imagenes/imagen1.jpg);
-    background-size: 2000px;
+   
+    
     
     width: 100%;
-    height: 92.045vh;
+    height: 90.045vh;
+    
+    
     display: flex;
+    background: url(./imagenes/imagen1.jpg) ;
+    background-size: 1400px;
     
 }
 .contenedor_formulario{
     width: 800px;
     height: 500px;
-    
+    margin-top: 164px;
     display: flex;
-    margin: auto;
+    margin: 200px auto;
     border-radius: 10px;
     box-shadow: 3px 3px 15px rgb(133, 133, 133);
 
@@ -123,15 +137,16 @@ html,body {
 
     
    color: rgb(61, 61, 61);
+   color: rgb(85, 85, 85);
     
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .formulario input{
     width: 87%;
     margin-left: 26px;
     height: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 17px;
     text-align: center;
     outline: none;
@@ -174,7 +189,7 @@ html,body {
     border: none;
     font-size: 18px;
     margin-left: 26px;
-    background: rgb(43, 43, 43);
+    
     color: white;
 }
 
@@ -182,6 +197,124 @@ html,body {
     width: 50%;
     height: 500px;
     background: sandybrown;
+    background: url(./imagenes/imagen3.png)no-repeat sandybrown;
+    background-size: 350px;
+    background-position-y: 50px;
+    background-position-x: 30px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
+
+.pagina_tareas{
+    width: 100%;
+    height: 92vh;
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.pagina_tareas_titulo{
+    
+    padding-top: 100px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+.pagina_tareas_titulo h1{
+       
+}
+
+.pagina_tareas h1{
+    font-size: 30px;
+    
+}
+.contenedor_cards{
+    margin-top: 30px;
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.cards{
+    width: 350px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 14px rgb(150, 150, 150);
+    background: rgb(240, 240, 240);
+    margin-left: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+.cards_botones{
+    display: flex;
+    width: 300px;
+    height: 50px;
+    margin: 10px auto;
+    
+    margin-top: 10px;
+    
+}
+
+.cards h2{
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 20px;
+    font-size: 22px;
+
+}
+.cards p{
+    margin-bottom: 10px;
+
+}
+
+
+
+.cards_botones button{
+    margin: auto;
+    width: 93px;
+    height: 40px;
+    background: black;
+    color: white;
+    margin-left: 5px;
+    border-radius: 15px;
+    border: none;
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .formulario_parrafo{
+        width: 0%;
+
+    }
+    .formulario{
+        width: 100%;
+        height: 450px;
+    }
+
+    .formulario h1{
+        margin-top: 56px;
+    }
+    .contenedor_formulario{
+        width: 350px;
+        height: 450px;
+    }
+    .navbar_logo h1{
+       font-size: 21px;
+    }
+    .navbar_navegacion_link{
+        font-size: 17px;
+    }
+    .navbar_navegacion_link:hover{
+        background: none;
+        color: rgb(85, 85, 85);
+        transition:0.5s;
+        
+    }
+  }

@@ -11,14 +11,18 @@ export const Taskcard = ({task}) =>{
     }
     
     return(
-        <div>
+        <div className="cards" key={task.id}>
             <h2>{task.title}</h2>
             <p>{task.descripcion}</p>
             <span>{task.done == 1 ? "✔️":'❌'}</span>
             <span>{task.createAt}</span>
+            <div className="cards_botones">
             <button onClick={() => deleteTask(task.id)}>Delete</button>
             <button onClick={()=>navigate(`/edit/${task.id}`)}>Edit</button>
             <button onClick={()=>handleDone()}>togle task</button>
+                
+            </div>
+            
         </div>
     );
 }
