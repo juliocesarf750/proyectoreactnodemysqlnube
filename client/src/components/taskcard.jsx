@@ -11,7 +11,7 @@ export const Taskcard = ({task}) =>{
     }
     
     return(
-        <div className="cards" key={task.id}>
+        <div className="cards py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500" key={task.id}>
             <h2>{task.title}</h2>
             <p>{task.descripcion}</p>
             <span>{task.done == 1 ? "✔️":'❌'}</span>

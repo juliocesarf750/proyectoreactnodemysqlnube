@@ -21,7 +21,7 @@ html,body {
     margin :0px;
     
     background: rgb(240, 240, 240);
-    border-bottom: solid 2px rgb(214, 214, 214);
+    border-bottom: solid 3px rgb(214, 214, 214);
     z-index: 1;
     position: fixed;
     
@@ -35,7 +35,7 @@ html,body {
         
     height: 67px;
     margin: 0px auto;
-    border-bottom: solid 2px rgb(214, 214, 214);
+    border-bottom: solid 3px rgb(214, 214, 214);
 }
 
 .navbar_logo{
@@ -46,7 +46,7 @@ html,body {
  
 }
 .navbar_logo h1{
-   margin: 12px;
+   margin: 19px;
    
 }
 
@@ -63,13 +63,15 @@ html,body {
 .navbar_navegacion li{
    
     list-style: none;
-    padding:23px 0px;
+    padding:20px 0px;
     
 }
 
 
 .navbar_navegacion_link{
-    padding:25px;
+    padding:20px;
+    padding-top: 26px;
+    padding-bottom: 24px;
     text-decoration: none;
     
     margin-left: 1px;
@@ -79,7 +81,7 @@ html,body {
 }
 
 .navbar_navegacion_link:hover{
-    background: black;
+    background: #4b93ff;
     color: white;
     transition:0.5s;
     
@@ -97,15 +99,17 @@ html,body {
     background: url(./imagenes/imagen1.jpg) ;
     background-size: 1400px;
     
+    
 }
 .contenedor_formulario{
     width: 800px;
-    height: 500px;
+    height: 450px;
     margin-top: 164px;
     display: flex;
     margin: 200px auto;
     border-radius: 10px;
     box-shadow: 3px 3px 15px rgb(133, 133, 133);
+    border: solid 3px rgb(172, 172, 172);
 
     
  
@@ -113,18 +117,18 @@ html,body {
 
 .formulario{
     width: 50%;
-    height: 500px;
+    height: 445px;
     background: rgb(248, 248, 248);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: rgb(234, 234, 234);
+    background: rgba(234, 234, 234, 0.904);
     
     
 }
 
 .formulario h1{
     text-align: center;
-    margin-top: 80px;
+    margin-top: 55px;
     margin-bottom: 30px;
     color: rgb(61, 61, 61);
     
@@ -191,31 +195,32 @@ html,body {
     margin-left: 26px;
     
     color: white;
+    box-shadow: 1px 1px 5px rgb(117, 117, 117);
 }
 
 .formulario_parrafo{
     width: 50%;
-    height: 500px;
+    height: 445px;
     background: sandybrown;
-    background: url(./imagenes/imagen3.png)no-repeat sandybrown;
-    background-size: 350px;
-    background-position-y: 50px;
-    background-position-x: 30px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    background: url(./imagenes/formulario_parrafo/imagen4.png)no-repeat #4b93ff;
+    background-size: 400px;
+    background-position: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .pagina_tareas{
     width: 100%;
     height: 92vh;
-    background: rgb(255, 255, 255);
+    background: url(./imagenes/imagen1.jpg) ;
+    background-size: 1400px;
     text-align: center;
 }
 
 .pagina_tareas_titulo{
     
     padding-top: 100px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     width: 100%;
     height: auto;
     
@@ -226,8 +231,10 @@ html,body {
        
 }
 
-.pagina_tareas h1{
-    font-size: 30px;
+.pagina_tareas_titulo h1{
+    font-size: 40px;
+    background: rgba(37, 157, 255, 0.808);
+    color: white;
     
 }
 .contenedor_cards{
@@ -245,11 +252,12 @@ html,body {
     width: 350px;
     height: 220px;
     border-radius: 10px;
-    box-shadow: 2px 2px 14px rgb(150, 150, 150);
-    background: rgb(240, 240, 240);
+    box-shadow: 1px 1px 10px rgb(150, 150, 150);
+    background: rgba(240, 240, 240, 0.904);
     margin-left: 10px;
     margin-top: 40px;
     text-align: center;
+    border: solid 4px rgb(177, 177, 177);
 }
 .cards_botones{
     display: flex;
@@ -263,9 +271,10 @@ html,body {
 
 .cards h2{
     text-align: center;
-    margin-top: 23px;
+    margin-top: 18px;
     margin-bottom: 20px;
     font-size: 22px;
+    color: rgb(19, 162, 245);
 
 }
 .cards p{
@@ -277,25 +286,29 @@ html,body {
 
 .cards_botones button{
     margin: auto;
-    width: 93px;
+    width: 100px;
     height: 40px;
-    background: black;
+    background: #4b93ff;
     color: white;
     margin-left: 5px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: none;
+    font-size: 14px;
+    box-shadow: 1px 1px 6px rgb(172, 172, 172);
 
 
 }
 
 @media screen and (max-width: 768px) {
     .formulario_parrafo{
-        width: 0%;
+        width: 0px;
+        height: 448px;
+      
 
     }
     .formulario{
-        width: 100%;
-        height: 450px;
+        width: 350px;
+        height: 448px;
     }
 
     .formulario h1{
@@ -315,6 +328,34 @@ html,body {
         background: none;
         color: rgb(85, 85, 85);
         transition:0.5s;
+        
+    }
+    .pagina_tareas{
+        width: 100%;
+        height: 92vh;
+        background: url(./imagenes/imagen1.jpg) ;
+        background-size: 1000px;
+        background-position: center;
+        text-align: center;
+    }
+
+    .pagina_tareas_titulo{
+    
+        padding-top: 100px;
+        padding-bottom: 0px;
+        width: 100%;
+        height: auto;
+        
+        
+    }
+    .contenedor_cards{
+        margin-top: 0px;
+        width: auto;
+        height: auto;
+        
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
         
     }
   }

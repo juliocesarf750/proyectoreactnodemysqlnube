@@ -36,7 +36,7 @@ export const Taskform = () =>{
     return(
         <div className="pagina_formulario">
           <div className="contenedor_formulario">
-            <div className="formulario_parrafo">
+            <div className="formulario_parrafo py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500">
 
             </div>
             <div className="formulario">
